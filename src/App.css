@@ -1,0 +1,395 @@
+/* At the top of your CSS file */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&display=swap');
+
+
+:root {
+  background-color: black;
+  text-align: center;
+  position: static;
+  color: white;
+  font-family: 'Montserrat';
+  scroll-behavior: smooth;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+strong {
+  font-weight: 1200;
+}
+
+@Keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@Keyframes appear {
+  0% {
+    opacity: 0;
+    scale: 0.5;
+  }
+  70% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@Keyframes appear3 {
+  0% {
+    opacity: 0;
+    scale: 0.5;
+  }
+  40% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@Keyframes appear2 {
+  0% {
+    opacity: 0;
+    scale: 0.5;
+  }
+  20% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.Intro {
+  width: 1200px;      /* sets the width */
+  height: 900px;
+  padding-top: 250px;
+  margin: 0 auto; /* centers the element */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: left; /* horizontal */
+  align-items: left;     /* vertical */
+  animation-name: fadeIn;
+  animation-duration: 3s;
+}
+
+.Hi {
+  font-size: 20px;
+}
+
+.Name {
+  font-size: 100px;
+  font-weight: 1000;
+  display: flex;
+}
+
+@keyframes bottomToTop {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+}
+
+@keyframes topToBottom {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+}
+
+@keyframes blacktowhite {
+  from {
+    background-color: black;
+    color: white;
+  }
+  to {
+    background-color: white;
+    color: black;
+  }
+}
+
+.FirstName {
+  animation-name: bottomToTop;
+  animation-duration: 1s;
+}
+
+.LastName {
+  animation-name: topToBottom;
+  animation-duration: 1s;
+}
+
+.pfp {
+  position: absolute;
+  left: 50px;
+  top: 30px;
+  border-radius: 700px;
+}
+
+.Slogan {
+  font-size: 20px;
+}
+
+.SocialMedia {
+  width: 300px;      /* sets the width */
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  justify-content: center; 
+  align-items: center; /* vertical */
+  transition: all 0.5s ease;
+}
+
+.Navbar {
+  display: flex;
+  animation-name: fadeIn;
+  animation-duration: 3s;
+  margin-top: 50px;
+}
+
+a {
+  text-decoration: none;   /* removes underline */
+  color: inherit;          /* makes link color same as parent, optional */
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+.CV {
+  position: absolute;
+  right: 50px;
+  border: 2px solid white;
+  border-radius: 50px;
+  padding: 15px;
+  background-color: white;
+  color: black;
+  font-weight: 700;
+  transition: ease 0.3s;
+  font-family: 'Montserrat';
+}
+
+.CV:hover {
+  transform: scale(1.05);
+}
+
+.LinkedIn {
+  margin-right: 100px;
+}
+
+.Instagram {
+  margin-right: 100px;
+}
+
+.Github {
+  margin-right: 100px;
+}
+
+.AboutMe {
+  margin-top: 90px;
+  font-size: 30px;
+  margin-bottom: 250px;
+}
+
+.Location {
+  position: absolute;
+  padding-left: 20px;
+  font-size: 20px;
+  top: 910px;
+}
+
+.Title {
+  font-size: 100px;
+  font-weight: 1000;
+  margin-bottom: 500px;
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-timeline: view();
+}
+
+.Secondtitle{
+  font-size: 100px;
+  font-weight: 1000;
+  margin-bottom: 100px;
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-timeline: view();
+}
+
+.Passion {
+  width: 1200px;
+  height: 1200px;
+  font-size: 30px;
+  margin: 0 auto;
+  margin-bottom: 800px;
+}
+
+.CyberSecurityTitle {
+  font-size: 50px;
+  font-weight: 1000;
+}
+
+.Apps {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px; 
+  animation-name: appear3;
+  animation-duration: 1s;
+  animation-timeline: view();
+}
+
+.Apps2 {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: bottom;
+  margin-bottom: 100px; 
+}
+
+.App {
+  margin-right: 50px;
+  padding-top: 30px;
+  transition: transform 0.3s ease;
+  animation-name: appear3;
+  animation-duration: 1s;
+  animation-timeline: view();
+}
+
+.App:hover {
+  transform: scale(1.05);
+}
+
+.App2 {
+  margin-right: 50px;
+  transition: transform 0.3s ease;
+}
+
+.App2:hover {
+  transform: scale(1.5);
+}
+
+.Thirdtitle {
+  font-size: 100px;
+  font-weight: 1000;
+  padding-bottom: 100px;
+  padding-top: 500px;
+}
+
+.FourthTitle {
+  font-size: 100px;
+  font-weight: 1000;
+  padding-bottom: 100px;
+}
+
+.ExperienceDescription {
+  font-size: 20px;
+  width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+  margin-bottom: 800px;
+}
+
+.Experience {
+  border: 2px solid white;
+  backdrop-filter: blur(50px);
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50px;
+  margin: 0 auto;
+  width: 1100px;
+  height: 200px;
+  padding: 100px;
+  margin-bottom: 100px;
+  transition: background-color 1s, color 1s, transform 0.3s ease;
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-timeline: view();
+}
+
+.ProjectGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 2px solid white;
+  border-radius: 50px;
+  margin: 0 auto;
+  padding: 50px;
+  justify-items: center;
+  transition: background-color 1s, color 1s, transform 0.3s ease;
+  animation-name: appear2;
+  animation-duration: 1s;
+  animation-timeline: view();
+}
+
+.Project {
+  width: 300px;
+  backdrop-filter: blur(50px);
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid white;
+  transition: background-color 1s, color 1s, transform 0.1s ease;
+}
+
+.ProjectTitle {
+  padding: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.ProjectDescription {
+  margin: 40px;
+}
+
+.typingImage {
+  animation-name: appear2;
+  animation-duration: 1s;
+  animation-timeline: view();
+}
+
+.Project:hover {
+  background-color: white;
+  color: black;
+}
+
+.ExperienceTitle {
+  font-size: 40px;
+  width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.ExperienceDescription {
+  width: 1100px;
+  margin-right: 700px;
+}
+
+.ExperienceDate {
+  font-size: 20px;
+  width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
