@@ -63,7 +63,7 @@ function App() {
             <a href="https://github.com/ritthickkt"><img src={github} width={50} height={50} /></a>
           </div>
         </div>
-        <a className="CV" href={'/ritthick-portfolio/resume.pdf'} download='RitthickThiaga.pdf'>
+        <a className="CV" href={'/portfolio/resume.pdf'} download='RitthickThiaga.pdf'>
             Curriculum Vitae | CV
         </a>
       </div>
