@@ -126,8 +126,6 @@ function App() {
             <img src={github} width={100} height={100}/>
           </a>
         </div>
-      </div>
-      <div className="Apps2">
         <div className="App">
           <a href="https://www.python.org/">
             <img src={python} width={100} height={100} />  
