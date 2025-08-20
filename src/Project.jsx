@@ -5,7 +5,7 @@ function Project({ projectTitle, projectDescription, projectLink }) {
     <>
       <div 
           className='Project'
-          onClick={() => window.open({projectLink}, "_blank")}
+          onClick={() => window.open(projectLink, "_blank")}
           style={{ cursor: "pointer" }}
         >
           <div className='ProjectTitle'>
