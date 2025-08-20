@@ -208,9 +208,9 @@ profiling high-risk contracts.</li>
       <div className='ProjectGrid'>
         <Project projectTitle="Pomodoro Timer" projectDescription="Features customizable 25+5 and 50+10 minute Pomodoro settings for focused work sessions." projectLink="https://github.com/ritthickkt/pomodoro-timer"/>
         <Project projectTitle="Chat App" projectDescription="Group chat application built with firebase, react and electron. Integrates a SSO Login page with Google. " projectLink="https://github.com/ritthickkt/chat-app"/>
-        <Project projectTitle="Weather App" projectDescription="Weather allows users to forecast weather for any location including precipitation probability and hourly forecasts." projectLink="https://github.com/ritthickkt/pomodoro-timer"/>
-        <Project projectTitle="Typing speed tester" projectDescription="Typing Speed Checker built with React and Vite. It allows users to test their typing speed and accuracy by typing a given text within a time limit." projectLink="https://github.com/ritthickkt/pomodoro-timer"/>
-        <Project projectTitle="Calculator App" projectDescription="Calculator App built with React and Vite. It allows users to perform basic arithmetic operations like addition, subtraction, multiplication, and division." projectLink="https://github.com/ritthickkt/pomodoro-timer"/>
+        <Project projectTitle="Weather App" projectDescription="Weather allows users to forecast weather for any location including precipitation probability and hourly forecasts." projectLink="https://github.com/ritthickkt/weather-app"/>
+        <Project projectTitle="Typing speed tester" projectDescription="Typing Speed Checker built with React and Vite. It allows users to test their typing speed and accuracy by typing a given text within a time limit." projectLink="https://github.com/ritthickkt/Typing-Speed-Test"/>
+        <Project projectTitle="Calculator App" projectDescription="Calculator App built with React and Vite. It allows users to perform basic arithmetic operations like addition, subtraction, multiplication, and division." projectLink="https://github.com/ritthickkt/calculator"/>
         <Project projectTitle="AI-Chatbot" projectDescription="AI Chatbot build using Google's Gemini API. Built with React and Vite." projectLink="https://github.com/ritthickkt/pomodoro-timer"/>
       </div>
     </>
