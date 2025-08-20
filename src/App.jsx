@@ -15,11 +15,13 @@ import expo from '/src/assets/expo.png'
 import tailwindcss from '/src/assets/tailwindcss.png'
 import pfp from '/src/assets/pfp.png'
 import bootstrap from '/src/assets/bootstrap.png'
+import electron from '/src/assets/electron.png'
 import typing from '/src/assets/typing.png'
 import React, { useEffect } from "react";
 import Background from './Background.jsx'
 import Silk from '/src/components/Silk.jsx'
 import Lenis from 'lenis'
+import Project from './Project.jsx'
 
 function App() {
   useEffect(() => {
@@ -39,8 +41,8 @@ function App() {
         left: 0,
         width: '100vw',
         height: '100vh',
-        zIndex: -1, // Behind all content
-        pointerEvents: 'none' // Allows clicking through to content below
+        zIndex: -1, 
+        pointerEvents: 'none' 
       }}>
         <Silk
           speed={5}
@@ -63,7 +65,7 @@ function App() {
             <a href="https://github.com/ritthickkt"><img src={github} width={50} height={50} /></a>
           </div>
         </div>
-        <a className="CV" href={'/portfolio/resume.pdf'} download='RitthickThiaga.pdf'>
+        <a className="CV" href={'/resume.pdf'} download='RitthickThiaga.pdf'>
             Curriculum Vitae | CV
         </a>
       </div>
@@ -81,7 +83,7 @@ function App() {
           </div>
         </div>
         <div className="AboutMe">
-          I am a penultimate <strong>computer science</strong> student, specialising in <b>security engineering</b>
+          I am a penultimate <b>computer science</b> student, specialising in <b>security engineering</b>
           . Scroll down to find more about me and what I do. 
         </div>
       </div>
@@ -156,6 +158,11 @@ function App() {
             <img src={bootstrap} width={125} height={100}/>
           </a>
         </div>
+        <div className="App">
+          <a href="https://electronjs.org//">
+            <img src={electron} width={100} height={100}/>
+          </a>
+        </div>
       </div>
       <div className="Thirdtitle">
         Experience           
@@ -176,7 +183,7 @@ recommendations, improving company-wide security awareness.</li>
           </ul>
         </div>
       </div>
-      <div className="Experience">
+      <div className="Experience2">
         <div className="ExperienceTitle">
           <div>Data Analyst Extern @ Webacy</div>
         </div>
@@ -197,43 +204,16 @@ profiling high-risk contracts.</li>
       <div className='FourthTitle'>
         Projects
       </div>
+      <div className='ScrollRight'>
+        Scroll →
+      </div>
       <div className='ProjectGrid'>
-        <div 
-          className='Project'
-          onClick={() => window.open("https://github.com/ritthickkt/Typing-Speed-Test", "_blank")}
-          style={{ cursor: "pointer" }}
-        >
-          <div className='ProjectTitle'>
-            <div>Typing Speed Tester</div>
-          </div>
-          <div className='ProjectDescription'>
-            Simple Typing Speed Checker built with React and Vite. It allows users to test their typing speed and accuracy by typing a given text within a time limit.
-          </div>
-        </div>
-        <div 
-          className='Project'
-          onClick={() => window.open("https://github.com/ritthickkt/calculator", "_blank")}
-          style={{ cursor: "pointer" }}
-        >
-          <div className='ProjectTitle'>
-            <div>Simple Calculator App</div>
-          </div>
-          <div className='ProjectDescription'>
-            Simple Calculator App built with React and Vite. It allows users to perform basic arithmetic operations like addition, subtraction, multiplication, and division.
-          </div>
-        </div>
-        <div 
-          className='Project'
-          onClick={() => window.open("https://github.com/ritthickkt/chatbot", "_blank")}
-          style={{ cursor: "pointer" }}
-        >
-          <div className='ProjectTitle'>
-            <div>AI Chatbot</div>
-          </div>
-          <div className='ProjectDescription'>
-            AI Chatbot build using Google's Gemini API. Built with React and Vite. 50 requests per day maximum
-          </div>
-        </div>
+        <Project projectTitle="Pomodoro Timer" projectDescription="Features customizable 25+5 and 50+10 minute Pomodoro settings for focused work sessions." projectLink="https://github.com/ritthickkt/pomodoro-timer"/>
+        <Project projectTitle="Chat App" projectDescription="Group chat application built with firebase, react and electron. Integrates a SSO Login page with Google. " projectLink="https://github.com/ritthickkt/chat-app"/>
+        <Project projectTitle="Weather App" projectDescription="Weather allows users to forecast weather for any location including precipitation probability and hourly forecasts." projectLink="https://github.com/ritthickkt/pomodoro-timer"/>
+        <Project projectTitle="Typing speed tester" projectDescription="Typing Speed Checker built with React and Vite. It allows users to test their typing speed and accuracy by typing a given text within a time limit." projectLink="https://github.com/ritthickkt/pomodoro-timer"/>
+        <Project projectTitle="Calculator App" projectDescription="Calculator App built with React and Vite. It allows users to perform basic arithmetic operations like addition, subtraction, multiplication, and division." projectLink="https://github.com/ritthickkt/pomodoro-timer"/>
+        <Project projectTitle="AI-Chatbot" projectDescription="AI Chatbot build using Google's Gemini API. Built with React and Vite." projectLink="https://github.com/ritthickkt/pomodoro-timer"/>
       </div>
     </>
   )
