@@ -9,11 +9,9 @@
   color: white;
   font-family: 'Montserrat';
   scroll-behavior: smooth;
-}
-
-.dark-mode {
-  background-color: black;
-  color: white;
+  overflow: scroll;
+  scrollbar-color: white black;
+  scrollbar-width: thin;
 }
 
 strong {
@@ -82,7 +80,7 @@ strong {
   text-align: left;
   display: flex;
   flex-direction: column;
-  justify-content: left; /* horizontal */
+  justify-content: left; /* horzontal */
   align-items: left;     /* vertical */
   animation-name: fadeIn;
   animation-duration: 3s;
@@ -144,9 +142,6 @@ strong {
 }
 
 .pfp {
-  position: absolute;
-  left: 50px;
-  top: 30px;
   border-radius: 700px;
 }
 
@@ -155,25 +150,35 @@ strong {
 }
 
 .SocialMedia {
-  width: 300px;      /* sets the width */
-  margin: 0 auto;
-  grid-template-columns: repeat(3, 1fr);
+  width: 30vh;
+  padding: 10px;
+  border-radius: 50px;
+  position: absolute;
+  left: 39%;
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
-  justify-content: center; 
-  align-items: center; /* vertical */
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
   transition: all 0.5s ease;
+  backdrop-filter: blur(0px);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .Navbar {
   display: flex;
-  animation-name: fadeIn;
-  animation-duration: 3s;
-  margin-top: 50px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 40px;
+  box-sizing: border-box;
 }
 
 a {
-  text-decoration: none;   /* removes underline */
-  color: inherit;          /* makes link color same as parent, optional */
+  text-decoration: none;  
+  color: inherit;          
 }
 
 a:visited {
@@ -181,8 +186,6 @@ a:visited {
 }
 
 .CV {
-  position: absolute;
-  right: 50px;
   border: 2px solid white;
   border-radius: 50px;
   padding: 15px;
@@ -225,19 +228,10 @@ a:visited {
 .Title {
   font-size: 100px;
   font-weight: 1000;
-  margin-bottom: 500px;
   animation-name: appear;
   animation-duration: 1s;
   animation-timeline: view();
-}
-
-.Secondtitle{
-  font-size: 100px;
-  font-weight: 1000;
   margin-bottom: 100px;
-  animation-name: appear;
-  animation-duration: 1s;
-  animation-timeline: view();
 }
 
 .Passion {
@@ -254,41 +248,36 @@ a:visited {
 }
 
 .Apps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 60px;
-  justify-items: center;
-  align-items: center;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 120vh;
   justify-content: center;
-  margin: 0 auto 40px auto;
-  width: 90%;
-  max-width: 1200px;
+  gap: 60px;
+  border: 2px solid white;
+  backdrop-filter: blur(50px);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 50px;
+  border-radius: 50px;
 }
 
+.NavbarApp,
 .App {
-  padding-top: 30px;
   transition: transform 0.3s ease;
-  animation-name: appear3;
-  animation-duration: 1s;
-  animation-timeline: view();
+  border-radius: 10px;
+}
+
+.NavbarApp:hover {
+  transform: scale(1.25);
 }
 
 .App:hover {
   transform: scale(1.05);
 }
 
-.Thirdtitle {
-  font-size: 100px;
-  font-weight: 1000;
-  padding-bottom: 100px;
-  padding-top: 500px;
-}
-
-.FourthTitle {
-  font-size: 100px;
-  font-weight: 1000;
-  padding-bottom: 100px;
-  margin-top: 300px;
+.Space {
+  margin-bottom: 500px;
 }
 
 .ExperienceDescription {
@@ -301,7 +290,6 @@ a:visited {
 
 .ExperienceDate {
   font-size: 20px;
-  /* width: 1200px; */
   margin: 0 auto;
   text-align: left;
 }
@@ -421,16 +409,12 @@ a:visited {
 
   .Intro,
   .Navbar,
-  .App,
   .Project,
-  .ProjectTitle,
   .ProjectGrid,
   .typingImage,
   .Experience,
   .Experience2,
-  .Secondtitle,
-  .Thirdtitle,
-  .FourthTitle {
+  .Title {
     animation: none !important;
     animation-name: none !important;
   }
@@ -490,9 +474,6 @@ a:visited {
     justify-content: center;
   }
 
-  .Secondtitle,
-  .Thirdtitle,
-  .FourthTitle,
   .Title {
     font-size: 32px;
     width: 100%;
@@ -526,19 +507,15 @@ a:visited {
   }
 
 
-  .Apps,
-  .Apps2 {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr);
+  .Apps {
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
     gap: 16px;
-    width: 100%;
-    margin-bottom: 40px;
-    justify-items: center;
-    align-items: center;
+    width: auto;
+    margin: 0 auto 40px auto;
+    justify-content: center;
   }
 
-  .App,
-  .App2 {
+  .App {
     margin-right: 0;
     padding-top: 10px;
   }
@@ -550,12 +527,6 @@ a:visited {
     margin: 0 auto;
     border-radius: 20px;
     padding: 10px;
-  }
-
-  .ProjectTitle {
-    font-size: 20px;
-    padding: 10px;
-    margin-bottom: 10px;
   }
 
   .ProjectDescription {
@@ -578,15 +549,19 @@ a:visited {
   }
 
   .pfp {
-    position: static;
-    margin: 0 auto 20px auto;
-    display: block;
+    margin-bottom: 50px;
   }
 
+
   .SocialMedia {
-    width: 50vw;
+    width: 100vw;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin-bottom: 20px;
+    justify-items: center;
+    align-items: center;
   }
 
   .ScrollRight {
