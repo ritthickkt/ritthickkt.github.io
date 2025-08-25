@@ -1,0 +1,69 @@
+@import './Animations.css';
+
+.experience {
+  display: flex;
+  flex-direction: row;
+}
+
+.title-align {
+  display: flex;
+  flex-direction: row;
+}
+
+.vertical-line-with-dot {
+  width: 2px;
+  height: 300px;
+  background-color:rgb(162, 162, 162);
+  position: relative; 
+  margin-right: 20px;
+}
+
+.vertical-line-with-dot::before {
+  content: ""; 
+  display: block;
+  width: 10px; 
+  height: 10px;
+  background-color: rgba(0, 170, 255, 1);
+  border-radius: 50%; 
+  position: absolute; 
+  top: 8px;
+  left: 50%; 
+  transform: translateX(-50%);
+}
+
+.experience-content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.experience-company {
+  font-weight: bold;
+  font-size: 30px;
+  opacity: 0;
+}
+
+.experience-title {
+  font-size: 20px;
+  color: rgba(0, 170, 255, 1);;
+  opacity: 0;
+}
+
+.experience-date {
+  color: rgb(162, 162, 162);
+  opacity: 0;
+}
+
+.experience-description {
+  line-height: 1.5;
+  opacity: 0;
+}
+
+.show.experience-company,
+.show.experience-title,
+.show.experience-date, 
+.show.experience-description {
+  animation-name: fadeInFromBottom;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}

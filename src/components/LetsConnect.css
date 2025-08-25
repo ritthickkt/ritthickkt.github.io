@@ -1,0 +1,31 @@
+.lets-connect {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.email {
+  border: 30px;
+  font-size: 20px;
+  border-radius: 30px;
+  font-family: 'Archivo';
+  color: white;
+  background: transparent;
+  border: 1px solid rgba(0, 170, 255, 1);
+  padding: 20px;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  margin-bottom: 90px;
+}
+
+.email:hover {
+  transform: scale(1.1);
+  background-color: #09174b;
+}
+
+.call-to-action {
+  font-size: 20px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}

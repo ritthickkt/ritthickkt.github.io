@@ -1,0 +1,112 @@
+@import './Animations.css';
+
+.parent {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 70px;
+  animation-name: fadeInFromTop;
+  animation-duration: 1s;
+}
+
+.show.picture {
+  animation-name: fadeInFromTop;
+  animation-duration: 1s;
+}
+
+.picture {
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+
+.child1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.linkedIn,
+.github,
+.instagram {
+  transition: transform 0.3s ease;
+}
+
+.linkedIn:hover,
+.github:hover,
+.instagram:hover {
+  transform: scale(1.25);
+  cursor: pointer;
+}
+
+.contact-handles {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 16px;
+}
+
+.show.linkedIn {
+  animation-name: fadeInScale;
+  animation-duration: 1s;
+}
+
+.show.github {
+  animation-name: fadeInScale;
+  animation-duration: 1s;
+  animation-delay: 0.4s;
+  animation-fill-mode: backwards;
+}
+
+.show.instagram {
+  animation-name: fadeInScale;
+  animation-duration: 1s;
+  animation-delay: 0.2s;
+  animation-fill-mode: backwards;
+}
+
+.location {
+  color: rgb(162, 162, 162);
+}
+
+.show.location {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+.show.name {
+  animation-name: fadeInFromLeft;
+  animation-duration: 1s;
+}
+
+.name {
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.show.occupation {
+  animation-name: fadeInFromLeft;
+  animation-duration: 1s;
+  animation-delay: 0.2s;
+  animation-fill-mode: backwards;
+}
+
+.occupation {
+  color: rgb(162, 162, 162);
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.child2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.show.description {
+  animation-name: fadeInFromLeft;
+  animation-duration: 1s;
+  animation-delay: 0.4s;
+  animation-fill-mode: backwards;
+}
+
+.description {
+  line-height: 1.6;
+}

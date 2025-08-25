@@ -1,0 +1,12 @@
+@import './Animations.css';
+
+.stack-border {
+  display: grid;
+  justify-content: center;
+  gap: 50px;
+  grid-template-columns: repeat(5, auto);
+  flex-wrap: wrap;
+  width: 100%;
+  animation-name: fadeInFromBottom;
+  animation-duration: 1s;
+}
