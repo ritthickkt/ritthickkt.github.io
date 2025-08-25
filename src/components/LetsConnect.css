@@ -17,15 +17,48 @@
   padding: 20px;
   transition: transform 0.5s ease, background-color 0.5s ease;
   margin-bottom: 90px;
+  opacity: 0;
+}
+
+.show.email {
+  animation-name: fadeInFromBottom;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
 
 .email:hover {
   transform: scale(1.1);
   background-color: #09174b;
+  cursor: pointer;
 }
 
 .call-to-action {
   font-size: 20px;
   letter-spacing: 3px;
   margin-bottom: 20px;
+}
+
+.show.call-to-action {
+  animation-name: fadeInFromBottom;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.lets-connect-name {
+  justify-content: center;
+  font-size: 40px;
+  font-weight: bold;
+  background: #ffffff;
+  background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(0, 170, 255, 1) 35%, rgba(195, 200, 230, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+}
+
+.show.lets-connect-name {
+  animation-name: fadeInFromBottom;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }

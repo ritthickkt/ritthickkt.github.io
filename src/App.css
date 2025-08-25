@@ -33,7 +33,8 @@
 }
 
 .buttons:hover {
-  background-color: rgba(0, 170, 255, 1);;
+  background-color: rgba(0, 170, 255, 1);
+  cursor: pointer;
 }
 
 .navigation {
