@@ -10,7 +10,6 @@
   padding: 20px;
   grid-auto-flow: column;
   grid-template-rows: repeat(2, 1fr);
-  grid-auto-columns: 45%;
   width: 100%;
   gap: 50px;
   scroll-snap-type: x mandatory;

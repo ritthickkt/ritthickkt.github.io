@@ -19,6 +19,12 @@
   animation-duration: 1s;
 }
 
+
+.tech-arsenal {
+  width: 100%;
+}
+
+
 .buttons {
   border-radius: 50%;
   height: 1.5em;
@@ -34,5 +40,4 @@
   display: flex;
   gap: 20px;
   justify-content: center;
-  transform: translateX(-2%);
 }

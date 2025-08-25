@@ -26,7 +26,7 @@ function SectionTitle({ logo, name }) {
     <div className="title">
       <div className='section'>
         <img className="title-logo" src={logo} width={30} height={30}/>
-        <text className='section-name'>{name}</text>
+         <span className='section-name'>{name}</span>
       </div>
       <hr className="dotted-line" />
     </div>
