@@ -18,25 +18,31 @@ import nextjs from '/src/assets/nextjs.png'
 import mysql from '/src/assets/mysql.svg'
 
 function TechArsenal() {
- return (
-  <div className="stack-border">
-    <Application logo={git} name="Git"/>
-    <Application logo={html} name="HTMl"/>
-    <Application logo={css} name="CSS"/>
-    <Application logo={javascript} name="Javascript"/>
-    <Application logo={typescript} name="Typescript"/>
-    <Application logo={python} name="Python"/>
-    <Application logo={react} name="React"/>
-    <Application logo={vite} name="Vite"/>
-    <Application logo={tailwind} name="Tailwind"/>
-    <Application logo={bootstrap} name="Bootstrap"/>
-    <Application logo={firebase} name="Firebase"/>
-    <Application logo={apache} name="Apache"/>
-    <Application logo={expo} name="Expo"/>
-    <Application logo={nextjs} name="Next.js"/>
-    <Application logo={mysql} name="MySQL"/>
-  </div>
- )
+ const apps = [
+    { logo: git, name: "Git" },
+    { logo: html, name: "HTMl" },
+    { logo: css, name: "CSS" },
+    { logo: javascript, name: "Javascript" },
+    { logo: typescript, name: "Typescript" },
+    { logo: python, name: "Python" },
+    { logo: react, name: "React" },
+    { logo: vite, name: "Vite" },
+    { logo: tailwind, name: "Tailwind" },
+    { logo: bootstrap, name: "Bootstrap" },
+    { logo: firebase, name: "Firebase" },
+    { logo: apache, name: "Apache" },
+    { logo: expo, name: "Expo" },
+    { logo: nextjs, name: "Next.js" },
+    { logo: mysql, name: "MySQL" },
+  ];
+
+  return (
+    <div className="stack-border">
+      {apps.map((app, idx) => (
+        <Application key={app.name} logo={app.logo} name={app.name} index={idx} />
+      ))}
+    </div>
+  );
 }
 
 export default TechArsenal

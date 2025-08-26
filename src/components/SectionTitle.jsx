@@ -1,13 +1,14 @@
 import './SectionTitle.css'
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 
 function SectionTitle({ logo, name }) {
+  const logoRef = useRef(null);
+  const nameRef = useRef(null);
+  const lineRef = useRef(null);
+
   useEffect(() => {
-    const selectors = ['.title-logo', '.section-name', '.dotted-line'];
-    const elements = selectors
-      .map(sel => Array.from(document.querySelectorAll(sel)))
-      .flat();
+    const elements = [logoRef.current, nameRef.current, lineRef.current].filter(Boolean);
 
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
@@ -20,15 +21,15 @@ function SectionTitle({ logo, name }) {
 
     elements.forEach(el => observer.observe(el));
     return () => observer.disconnect();
-  }, []); 
+  }, []);
 
   return (
     <div className="title">
       <div className='section'>
-        <img className="title-logo" src={logo} width={30} height={30}/>
-         <span className='section-name'>{name}</span>
+        <img ref={logoRef} className="title-logo" src={logo} width={30} height={30}/>
+        <span ref={nameRef} className='section-name'>{name}</span>
       </div>
-      <hr className="dotted-line" />
+      <hr ref={lineRef} className="dotted-line" />
     </div>
   )
 }

@@ -10,3 +10,9 @@
   animation-name: fadeInFromBottom;
   animation-duration: 1s;
 }
+
+@media (max-width: 800px) {
+  .stack-border {
+    grid-template-columns: repeat(2, auto);
+  }
+}

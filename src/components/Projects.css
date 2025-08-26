@@ -34,3 +34,9 @@
   background: transparent;
   color: white;
 }
+
+@media (max-width: 800px) {
+  .projects {
+    grid-template-rows: repeat(3, 1fr);
+  }
+}

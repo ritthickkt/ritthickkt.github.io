@@ -23,7 +23,9 @@
 }
 
 .show.dotted-line {
-  animation: animated-line 1s linear forwards;
+  animation-name: animated-line;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 .title {
@@ -67,8 +69,8 @@
   margin: 16px 0;
   width: 100%;
   background-size: 100% 100%;
-  opacity: 0;
   margin-bottom: 50px;
+  opacity: 0;
 }
 
 .section {

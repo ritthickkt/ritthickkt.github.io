@@ -36,35 +36,39 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
+  opacity: 0;
+}
+
+.show.experience-content {
+  animation-name: fadeInFromBottom;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 .experience-company {
   font-weight: bold;
   font-size: 30px;
-  opacity: 0;
 }
 
 .experience-title {
   font-size: 20px;
   color: rgba(0, 170, 255, 1);;
-  opacity: 0;
 }
 
 .experience-date {
   color: rgb(162, 162, 162);
-  opacity: 0;
 }
 
 .experience-description {
   line-height: 1.5;
-  opacity: 0;
 }
 
-.show.experience-company,
-.show.experience-title,
-.show.experience-date, 
-.show.experience-description {
-  animation-name: fadeInFromBottom;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+@media (max-width: 800px) {
+  .vertical-line-with-dot {
+    width: 2px;
+    height: 400px;
+    background-color:rgb(162, 162, 162);
+    position: relative; 
+    margin-right: 20px;
+  }
 }

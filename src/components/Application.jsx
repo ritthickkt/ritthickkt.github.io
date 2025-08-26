@@ -1,19 +1,18 @@
 import './Application.css'
 import { useEffect } from "react"
 
-function Application({ logo, name }) {
+function Application({ logo, name, index }) {
   useEffect(() => {
     const selectors = ['.stack'];
     const elements = selectors
       .map(sel => Array.from(document.querySelectorAll(sel)))
       .flat();
 
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('show');
-        } else {
-          entry.target.classList.remove('show');
+          obs.unobserve(entry.target);
         }
       });
     });
@@ -23,9 +22,12 @@ function Application({ logo, name }) {
   }, []); 
 
   return (
-    <div className='stack'>
+    <div 
+      className='stack'
+      style={{ animationDelay: `${index * 0.1}s` }}
+    >
       <img src={logo} className="application-logo" width={60} height={60}></img>
-      <text>{name}</text>
+      <span>{name}</span>
     </div>
   )
 }

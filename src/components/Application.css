@@ -24,10 +24,10 @@
 }
 
 .show.stack {
-  animation-name: fadeInFromBottom;
+  animation-name: fadeInFromBottom, fadeInFromTop;
   animation-duration: 1s;
   opacity: 1;
-  animation-fill-mode: forwards;
+  animation-fill-mode: backwards;
 }
 
 .application {

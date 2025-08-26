@@ -10,12 +10,11 @@ function LetsConnect() {
       .map(sel => Array.from(document.querySelectorAll(sel)))
       .flat();
 
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('show');
-        } else {
-          entry.target.classList.remove('show')
+          obs.unobserve(entry.target);
         }
       });
     });
