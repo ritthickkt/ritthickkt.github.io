@@ -5,6 +5,18 @@ function WorkExperience() {
   return (
     <div className="experience-stack">
       <Experience 
+        ExperienceCompany="Galaxy Technology Services"
+        ExperienceTitle="AI Product Development Intern"
+        ExperienceDate="August 2024 - Present"
+        ExperienceDescription={[
+          "Developed and implemented the backend for an AI-powered live agent, 'G-Voice,' designed to replace traditional IVR systems for services like hotel booking and customer support.",
+          "Utilized LiveKit to manage real-time audio streams, enabling fluid, two-way conversations with the AI agent.",
+          "Integrated Azure AI services for advanced speech-to-text and text-to-speech capabilities, forming the core of the agent's conversational intelligence.",
+          "Leveraged Docker to containerize the application, ensuring a consistent and portable development environment.",
+          "Contributed to the deployment of the application on Kubernetes, optimizing for scalability and high availability."
+        ]}
+      />
+      <Experience 
         ExperienceCompany="Pearler"
         ExperienceTitle="Penetration Tester"
         ExperienceDate="September 2024 - December 2024"

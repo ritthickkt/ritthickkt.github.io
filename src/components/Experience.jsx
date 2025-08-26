@@ -2,6 +2,7 @@ import './Experience.css'
 import { useEffect } from 'react';
 
 function Experience({ExperienceCompany, ExperienceTitle, ExperienceDate, ExperienceDescription}) {
+
   useEffect(() => {
     const selectors = ['.experience-content'];
     const elements = selectors
@@ -23,7 +24,7 @@ function Experience({ExperienceCompany, ExperienceTitle, ExperienceDate, Experie
 
   return (
     <div className="experience">
-      <div className='vertical-line-with-dot'></div>
+      <div className='circle'></div>
       <div className='experience-content'>
         <span className='experience-company'>{ExperienceCompany}</span>
         <span className='experience-title'>{ExperienceTitle}</span>
