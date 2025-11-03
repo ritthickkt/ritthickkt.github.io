@@ -3,8 +3,8 @@
 .stack-border {
   display: grid;
   justify-content: center;
-  gap: 50px;
-  grid-template-columns: repeat(5, auto);
+  gap: 30px;
+  grid-template-columns: repeat(6, auto);
   flex-wrap: wrap;
   width: 100%;
   animation-name: fadeInFromBottom;

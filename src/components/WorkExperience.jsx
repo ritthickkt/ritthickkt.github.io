@@ -7,7 +7,7 @@ function WorkExperience() {
       <Experience 
         ExperienceCompany="Galaxy Technology Services"
         ExperienceTitle="AI Product Development Intern"
-        ExperienceDate="August 2024 - Present"
+        ExperienceDate="August 2025 - Present"
         ExperienceDescription={[
           "Developed and implemented the backend for an AI-powered live agent, 'G-Voice,' designed to replace traditional IVR systems for services like hotel booking and customer support.",
           "Utilized LiveKit to manage real-time audio streams, enabling fluid, two-way conversations with the AI agent.",
@@ -33,17 +33,6 @@ function WorkExperience() {
           "Analysed and labelled smart contract vulnerabilities, enhancing accuracy in risk categorization and security assessment.",
           "Conducted correlation analysis of risk tags to identify the most prevalent vulnerabilities, improving fraud detection by 25%",
           "Applied unsupervised machine learning for cluster analysis, identifying common security risks and profiling high-risk contracts."
-        ]}
-      />
-      <Experience 
-        ExperienceCompany="Self-Employed"
-        ExperienceTitle="Python Tutor"
-        ExperienceDate="December 2023 - Febuary 2024"
-        ExperienceDescription={[
-          "Provided personalized Python tutoring, helping students grasp data structures, algorithms, and software development concepts.",
-          "Led students in developing a Food Management System, integrating Python with SQL databases, enhancing their practical coding skills by 40%.",
-          "Conducted online assessments to track student progress and tailor lesson plans for optimal learning outcomes.",
-          "Encouraged innovation by designing project-based learning, allowing students to build real-world applications.",
         ]}
       />
     </div>

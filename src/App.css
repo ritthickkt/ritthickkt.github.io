@@ -8,6 +8,8 @@
   font-family: 'Archivo';
 }
 
+
+
 body {
   max-width: 100vw;
   overflow-x: hidden;
@@ -29,6 +31,9 @@ body {
   width: 100%;
 }
 
+.projects-main {
+  width: 100%;
+}
 
 .buttons {
   border-radius: 50%;

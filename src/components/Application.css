@@ -3,6 +3,11 @@
 .application-logo {
   border-radius: 20px;
   margin-bottom: 20px;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stack:hover .application-logo {
+  transform: scale(1.15);
 }
 
 .stack {
@@ -10,9 +15,9 @@
   grid-template-columns: repeat(5, 1fr);
   flex-direction: column;
   align-items: center;
-  border: 0.5px solid rgba(0, 170, 255, 1);
+  border: 1px solid rgba(59, 130, 246, 0.5);
   padding: 10px;
-  border-radius: 20px;
+  border-radius: 15px;
   width: 100px;
   height: 100px;
   opacity: 0;

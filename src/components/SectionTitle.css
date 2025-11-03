@@ -38,7 +38,7 @@
   border: 1px solid rgba(0, 170, 255, 1);
   background-color: #09174b;
   padding: 20px;
-  border-radius: 30px;
+  border-radius: 20px;
   opacity: 0;
 }
  
@@ -47,7 +47,7 @@
   font-size: 40px;
   font-weight: bold;
   background: #ffffff;
-  background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(195, 200, 230, 1) 35%, rgba(0, 170, 255, 1) 100%);
+  background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(195, 200, 230, 1) 35%, rgba(59, 130, 246, 1) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -57,12 +57,12 @@
 
 .dotted-line {
   border: none;
-  height: 2px;
+  height: 1px;
   background: linear-gradient(
     90deg,
     rgba(25, 19, 132, 0) 0%,
     rgba(25, 19, 132, 0) 10%,
-    rgba(0, 170, 255, 1) 50%,
+    rgba(59, 130, 246, 1) 50%,
     rgba(9, 9, 121, 0) 90%,
     rgba(9, 9, 121, 0) 100%
   );
