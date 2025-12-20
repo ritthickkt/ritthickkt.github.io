@@ -4,16 +4,16 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  overflow-x: auto;                    /* enable horizontal scroll */
   -webkit-overflow-scrolling: touch; 
 }
 
 .projects {
   display: grid;
   padding: 20px;
-  grid-auto-flow: column;
-  grid-template-rows: repeat(2, auto);
-  gap: 70px;                /* adjust spacing */
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(2, auto);
+  gap: 70px;                
+  justify-content: center;
   width: 900px;
   padding: 12px;
 }
