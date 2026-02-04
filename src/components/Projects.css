@@ -47,6 +47,9 @@
 
 @media (max-width: 800px) {
   .projects {
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    width: 100%;
+    gap: 40px;
   }
 }

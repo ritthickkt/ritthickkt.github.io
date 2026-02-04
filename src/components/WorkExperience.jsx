@@ -4,10 +4,20 @@ import Experience from "./Experience"
 function WorkExperience() {
   return (
     <div className="experience-stack">
+      <Experience
+        ExperienceCompany="Ladder Inc"
+        ExperienceTitle="Software Engineer"
+        ExperienceDate="Jan 2026 - Present"
+        ExperienceDescription={[
+          "Engineered a deterministic, time-based state machine (Calendar Engine) to automate invoice status transitions (Grey/Green/Amber/Red) based on strict temporal logic rather than user input.",
+          "Architected a granular Role-Based Access Control (RBAC) system to manage permissions across four distinct stakeholder groups (PM, Builder, Subcontractor, Owner), ensuring data visibility rules were strictly enforced.",
+          "Developed a tamper-proof audit trail and export system that creates timestamped, immutable records of all project communications and status changes for legal and compliance verification.",
+        ]}
+      />
       <Experience 
         ExperienceCompany="Galaxy Technology Services"
         ExperienceTitle="AI Product Development Intern"
-        ExperienceDate="August 2025 - Present"
+        ExperienceDate="August 2025 - December 2025"
         ExperienceDescription={[
           "Developed and implemented the backend for an AI-powered live agent, 'G-Voice,' designed to replace traditional IVR systems for services like hotel booking and customer support.",
           "Utilized LiveKit to manage real-time audio streams, enabling fluid, two-way conversations with the AI agent.",
