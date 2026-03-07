@@ -23,8 +23,8 @@ function Aboutme() {
 
     elements.forEach(el => observer.observe(el));
     return () => observer.disconnect();
-  }, []); 
-
+  }, []);
+  
   return (
     <>
       <div className="parent">

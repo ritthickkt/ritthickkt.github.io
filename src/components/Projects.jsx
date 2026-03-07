@@ -2,6 +2,7 @@ import './Projects.css'
 
 import Project from "/src/components/Project.jsx"
 import codesnippet from "/src/assets/codesnippet.png"
+import orbit from "/src/assets/orbit.png"
 import weatherapp from "/src/assets/weatherapp.png"
 import pomodoro from "/src/assets/pomodoro.png"
 import chatapp from "/src/assets/chatapp.png"
@@ -21,6 +22,7 @@ function Projects() {
     <>
     <div className="project-stack">
       <div className='projects'>
+        <Project projectTitle="Orbit" projectDescription="Built for VSCode, Orbit is a VSCode extension that tracks the languages you code in, the time you coded for and gives you a level in accordance with how much coding experience you have." projectLink="https://github.com/ritthickkt/orbit" projectImage={orbit} projectStack={[]}/>
         <Project projectTitle="Airtable Clone" projectDescription="Built with Supabase, Prisma, and T3 stack, made to replicate the original Airtable website application with an additional button to add 100k rows." projectLink="https://github.com/ritthickkt/airtable_clone" projectImage={airtable} projectStack={[react,nextjs,supabase]}/>
         <Project projectTitle="Code Snippet" projectDescription="A public VS Code Extension that uses Paste Bin API to create sharable links for code snippets" projectLink="https://github.com/ritthickkt/codeSnippet" projectImage={codesnippet} projectStack={[javascript]} />
         <Project projectTitle="Weather App" projectDescription="Built with Open Meteo API and motion providing current temperature, hourly forecasts, and weekly forecasts." projectLink="https://github.com/ritthickkt/weather-app" projectImage={weatherapp} projectStack={[react,vite]}/>
