@@ -1,4 +1,5 @@
 import './App.css'
+import ScrollProgress from '/src/components/ScrollProgress.jsx'
 import Tag from '/src/components/Tag.jsx'
 import Aboutme from '/src/components/Aboutme.jsx'
 import SectionTitle from '/src/components/SectionTitle.jsx'
@@ -7,7 +8,7 @@ import projects from '/src/assets/projects.png'
 import settings from '/src/assets/settings.png'
 import Lenis from 'lenis'
 import { useEffect} from 'react'
-import work from '/src/assets/work.png' 
+import work from '/src/assets/work.png'
 import Projects from '/src/components/Projects.jsx'
 import WorkExperience from './components/WorkExperience'
 import LetsConnect from './components/LetsConnect.jsx'
@@ -25,7 +26,9 @@ function App() {
 
   return (
     <>
-      <Tag />
+      <ScrollProgress />
+      <div className="bg-orb bg-orb-1" />
+      <div className="bg-orb bg-orb-2" />
       <div className="home-page">
         <Aboutme />
         <div className="tech-arsenal">

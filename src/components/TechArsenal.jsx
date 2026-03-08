@@ -20,6 +20,12 @@ import supabase from '/src/assets/supabase.svg'
 import docker from '/src/assets/docker.svg'
 import nodejs from '/src/assets/nodejs.svg'
 import azure from '/src/assets/azure.svg'
+import postgresql from '/src/assets/postgresql.svg'
+import langchain from '/src/assets/langchain.svg'
+import prisma from '/src/assets/prisma.svg'
+import redis from '/src/assets/redis.svg'
+import fastapi from '/src/assets/fastapi.svg'
+import aws from '/src/assets/aws.svg'
 
 function TechArsenal() {
  const apps = [
@@ -34,14 +40,19 @@ function TechArsenal() {
     { logo: tailwind, name: "Tailwind" },
     { logo: bootstrap, name: "Bootstrap" },
     { logo: firebase, name: "Firebase" },
-    // { logo: apache, name: "Apache" },
     { logo: expo, name: "Expo" },
     { logo: nextjs, name: "Next.js" },
     { logo: mysql, name: "MySQL" },
+    { logo: postgresql, name: "PostgreSQL" },
+    { logo: prisma, name: "Prisma" },
+    { logo: redis, name: "Redis" },
     { logo: azure, name: "Azure" },
     { logo: nodejs, name: "Node.js" },
     { logo: supabase, name: "Supabase" },
     { logo: docker, name: "Docker" },
+    { logo: fastapi, name: "FastAPI" },
+    { logo: langchain, name: "LangChain" },
+    { logo: aws, name: "AWS" },
   ];
 
   return (

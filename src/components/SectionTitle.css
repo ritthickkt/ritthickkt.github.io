@@ -1,30 +1,21 @@
 @import './Animations.css';
 
-@keyframes animated-line {
-  0% {
-    transform: translateX(-30%);
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .show.title-logo {
   animation-name: spin;
-  animation-duration: 1s;
+  animation-duration: 0.8s;
   animation-fill-mode: forwards;
 }
 
 .show.section-name {
   animation-name: fadeInFromBottom;
-  animation-duration: 1s;
+  animation-duration: 0.8s;
   animation-fill-mode: forwards;
 }
 
 .show.dotted-line {
-  animation-name: animated-line;
+  animation-name: drawLine;
   animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
   animation-fill-mode: forwards;
 }
 
@@ -41,13 +32,12 @@
   border-radius: 20px;
   opacity: 0;
 }
- 
+
 .section-name {
   justify-content: center;
   font-size: 40px;
-  font-weight: bold;
-  background: #ffffff;
-  background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(195, 200, 230, 1) 35%, rgba(59, 130, 246, 1) 100%);
+  font-weight: 700;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(195, 200, 230, 1) 35%, rgba(59, 130, 246, 1) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -68,9 +58,9 @@
   );
   margin: 16px 0;
   width: 100%;
-  background-size: 100% 100%;
   margin-bottom: 50px;
   opacity: 0;
+  transform-origin: left center;
 }
 
 .section {

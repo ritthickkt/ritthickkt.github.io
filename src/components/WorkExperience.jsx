@@ -16,7 +16,7 @@ function WorkExperience() {
       />
       <Experience 
         ExperienceCompany="Galaxy Technology Services"
-        ExperienceTitle="AI Product Development Intern"
+        ExperienceTitle="AI Product Developer Intern"
         ExperienceDate="August 2025 - December 2025"
         ExperienceDescription={[
           "Developed and implemented the backend for an AI-powered live agent, 'G-Voice,' designed to replace traditional IVR systems for services like hotel booking and customer support.",

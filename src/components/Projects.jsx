@@ -17,22 +17,33 @@ import chatbot from "/src/assets/chatbot.png"
 import nextjs from "/src/assets/nextjs.png"
 import supabase from "/src/assets/supabase.svg"
 
+const projectList = [
+  { title: "Orbit", description: "Built for VSCode, Orbit is a VSCode extension that tracks the languages you code in, the time you coded for and gives you a level in accordance with how much coding experience you have.", link: "https://github.com/ritthickkt/orbit", image: orbit, stack: [] },
+  { title: "Airtable Clone", description: "Built with Supabase, Prisma, and T3 stack, made to replicate the original Airtable website application with an additional button to add 100k rows.", link: "https://github.com/ritthickkt/airtable_clone", image: airtable, stack: [react, nextjs, supabase] },
+  { title: "Code Snippet", description: "A public VS Code Extension that uses Paste Bin API to create sharable links for code snippets", link: "https://github.com/ritthickkt/codeSnippet", image: codesnippet, stack: [javascript] },
+  { title: "Weather App", description: "Built with Open Meteo API and motion providing current temperature, hourly forecasts, and weekly forecasts.", link: "https://github.com/ritthickkt/weather-app", image: weatherapp, stack: [react, vite] },
+  { title: "Pomodoro Timer", description: "Built with Javascript and Electron, providing a 25 and 50 minute pomodoro with 5 and 10 minute breaks respectively", link: "https://github.com/ritthickkt/pomodoro-timer", image: pomodoro, stack: [javascript, electron] },
+  { title: "Chat App", description: "Group chat application built with firebase, react and electron. Integrates a SSO Login page with Google.", link: "https://github.com/ritthickkt/chat-app", image: chatapp, stack: [firebase, electron, vite, react] },
+  { title: "Calculator App", description: "Calculator App built with React and Vite. It allows users to perform basic arithmetic operations like addition, subtraction, multiplication, and division.", link: "https://github.com/ritthickkt/calculator", image: calculator, stack: [vite, react] },
+  { title: "AI-Chatbot", description: "AI Chatbot build using Google's Gemini API. Built with React and Vite.", link: "https://github.com/ritthickkt/chat-bot", image: chatbot, stack: [vite, react] },
+]
+
 function Projects() {
   return (
-    <>
-    <div className="project-stack">
-      <div className='projects'>
-        <Project projectTitle="Orbit" projectDescription="Built for VSCode, Orbit is a VSCode extension that tracks the languages you code in, the time you coded for and gives you a level in accordance with how much coding experience you have." projectLink="https://github.com/ritthickkt/orbit" projectImage={orbit} projectStack={[]}/>
-        <Project projectTitle="Airtable Clone" projectDescription="Built with Supabase, Prisma, and T3 stack, made to replicate the original Airtable website application with an additional button to add 100k rows." projectLink="https://github.com/ritthickkt/airtable_clone" projectImage={airtable} projectStack={[react,nextjs,supabase]}/>
-        <Project projectTitle="Code Snippet" projectDescription="A public VS Code Extension that uses Paste Bin API to create sharable links for code snippets" projectLink="https://github.com/ritthickkt/codeSnippet" projectImage={codesnippet} projectStack={[javascript]} />
-        <Project projectTitle="Weather App" projectDescription="Built with Open Meteo API and motion providing current temperature, hourly forecasts, and weekly forecasts." projectLink="https://github.com/ritthickkt/weather-app" projectImage={weatherapp} projectStack={[react,vite]}/>
-        <Project projectTitle="Pomodoro Timer" projectDescription="Built with Javascript and Electron, providing a 25 and 50 minute pomodoro with 5 and 10 minute breaks respectively" projectLink="https://github.com/ritthickkt/pomodoro-timer" projectImage={pomodoro} projectStack={[javascript, electron]}/>
-        <Project projectTitle="Chat App" projectDescription="Group chat application built with firebase, react and electron. Integrates a SSO Login page with Google. " projectLink="https://github.com/ritthickkt/chat-app" projectImage={chatapp} projectStack={[firebase, electron, vite, react]}/>
-        <Project projectTitle="Calculator App" projectDescription="Calculator App built with React and Vite. It allows users to perform basic arithmetic operations like addition, subtraction, multiplication, and division." projectLink="https://github.com/ritthickkt/calculator" projectImage={calculator} projectStack={[vite, react]}/>
-        <Project projectTitle="AI-Chatbot" projectDescription="AI Chatbot build using Google's Gemini API. Built with React and Vite." projectLink="https://github.com/ritthickkt/chat-bot" projectImage={chatbot} projectStack={[vite, react]}/>
+    <div className="marquee-wrapper">
+      <div className="marquee-track">
+        {[...projectList, ...projectList].map((p, idx) => (
+          <Project
+            key={idx}
+            projectTitle={p.title}
+            projectDescription={p.description}
+            projectLink={p.link}
+            projectImage={p.image}
+            projectStack={p.stack}
+          />
+        ))}
       </div>
     </div>
-    </>
   )
 }
 

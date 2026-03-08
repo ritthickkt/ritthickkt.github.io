@@ -24,7 +24,7 @@ function Application({ logo, name, index }) {
   return (
     <div 
       className='stack'
-      style={{ animationDelay: `${index * 0.1}s` }}
+      style={{ animationDelay: `${index * 0.05}s` }}
     >
       <img src={logo} className="application-logo" width={60} height={60}></img>
       <span>{name}</span>
