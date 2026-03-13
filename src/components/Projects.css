@@ -1,33 +1,36 @@
-.marquee-wrapper {
-  width: 100%;
-  overflow: hidden;
-  padding: 20px 0;
-}
-
-.marquee-track {
+.projects-container {
   display: flex;
-  flex-direction: row;
-  gap: 40px;
-  width: max-content;
-  animation: marquee 35s linear infinite;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
 }
 
-.marquee-wrapper:hover .marquee-track {
-  animation-play-state: paused;
+.featured-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
 }
 
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
 }
 
-/* Override Project card fade-in animations inside the marquee */
-.marquee-track .project-parent,
-.marquee-track .project,
-.marquee-track .title-stack,
-.marquee-track .project-title,
-.marquee-track .stack-align,
-.marquee-track .project-description {
-  opacity: 1;
-  animation: none;
+@media (max-width: 900px) {
+  .featured-row {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }

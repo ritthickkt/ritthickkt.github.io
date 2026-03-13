@@ -23,7 +23,7 @@ import azure from '/src/assets/azure.svg'
 import postgresql from '/src/assets/postgresql.svg'
 import langchain from '/src/assets/langchain.svg'
 import prisma from '/src/assets/prisma.svg'
-import redis from '/src/assets/redis.svg'
+import swift from '/src/assets/swift.svg'
 import fastapi from '/src/assets/fastapi.svg'
 import aws from '/src/assets/aws.svg'
 
@@ -45,7 +45,7 @@ function TechArsenal() {
     { logo: mysql, name: "MySQL" },
     { logo: postgresql, name: "PostgreSQL" },
     { logo: prisma, name: "Prisma" },
-    { logo: redis, name: "Redis" },
+    { logo: swift, name: "Swift" },
     { logo: azure, name: "Azure" },
     { logo: nodejs, name: "Node.js" },
     { logo: supabase, name: "Supabase" },

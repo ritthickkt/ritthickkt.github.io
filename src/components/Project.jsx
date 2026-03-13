@@ -1,7 +1,7 @@
 import './Project.css'
 import { useEffect } from 'react';
 
-function Project({ projectTitle, projectDescription, projectLink, projectImage, projectStack }) {
+function Project({ projectTitle, projectDescription, projectLink, projectImage, projectStack, featured }) {
   useEffect(() => {
     const selectors = ['.project-parent', '.project', '.title-stack', '.project-title', '.stack-align', '.project-description'];
     const elements = selectors
@@ -23,7 +23,7 @@ function Project({ projectTitle, projectDescription, projectLink, projectImage, 
 
   return (
     <>
-      <div className='project-parent'>
+      <div className={`project-parent${featured ? ' featured' : ''}`}>
         <img src={projectImage} className="project-image"/>
         <div 
           className='project'

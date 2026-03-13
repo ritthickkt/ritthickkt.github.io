@@ -7,9 +7,22 @@
   border-radius: 20px;
   overflow: hidden;
   transition: transform 2s ease;
-  width: 400px;
+  width: 100%;
   border: 1px solid rgba(0, 170, 255, 1);
   opacity: 0;
+}
+
+.project-parent.featured .project-image {
+  height: 220px;
+  object-fit: cover;
+}
+
+.project-parent.featured .project-title {
+  font-size: 28px;
+}
+
+.project-parent.featured .project-description {
+  font-size: 14px;
 }
 
 .show.project-parent {
@@ -65,7 +78,8 @@
 
 .project-image {
   width: 100%;
-  height: 60%;
+  height: 160px;
+  object-fit: cover;
   margin-bottom: 20px;
 }
 
