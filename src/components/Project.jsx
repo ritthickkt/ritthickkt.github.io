@@ -27,7 +27,13 @@ function Project({ projectTitle, projectDescription, projectLink, projectImage, 
       className={`project-parent${featured ? ' featured' : ''}`}
       onClick={() => window.open(projectLink, '_blank', 'noreferrer')}
     >
-      <img src={projectImage} className="project-image" alt={projectTitle} />
+      <img
+        src={projectImage}
+        className="project-image"
+        alt={projectTitle}
+        loading="lazy"
+        decoding="async"
+      />
       <div className="project">
         <div className="title-stack">
           <span className="project-title">{projectTitle}</span>

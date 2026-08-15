@@ -111,3 +111,14 @@
     display: none;
   }
 }
+
+/* Touch targets: pad the links out to a comfortable tap size. */
+@media (hover: none) {
+  .navbar-socials {
+    gap: 2px;
+  }
+
+  .navbar-socials a {
+    padding: 9px;
+  }
+}

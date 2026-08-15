@@ -180,6 +180,16 @@ body {
   }
 }
 
+@media (max-width: 600px) {
+  .home-page {
+    gap: 76px;
+  }
+
+  .hero {
+    padding: 70px 0 62px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

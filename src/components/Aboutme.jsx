@@ -1,5 +1,5 @@
 import './Aboutme.css'
-import me from '/src/assets/me.jpeg'
+import me from '/src/assets/me.jpg'
 import instagram from '/src/assets/instagram.png'
 import github from '/src/assets/github.png'
 import linkedin from '/src/assets/linkedin.png'

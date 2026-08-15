@@ -185,6 +185,13 @@
   --tile: clamp(62px, 9.2vw, 112px);
 }
 
+/* The narrowest phones can't fit five tiles at the usual floor. */
+@media (max-width: 340px) {
+  .dock-md .dock-rail {
+    --tile: 36px;
+  }
+}
+
 /* ---------- Touch / small screens ---------- */
 
 @media (hover: none) {
@@ -198,8 +205,12 @@
     display: none;
   }
 
-  .dock-caption {
+  .dock-lg .dock-caption {
     display: block;
+  }
+
+  .dock-lg .dock-rail {
+    grid-template-columns: repeat(var(--cols), auto);
   }
 }
 
@@ -208,7 +219,7 @@
 }
 
 @media (max-width: 800px) {
-  .dock {
+  .dock:not(.dock-grid) {
     justify-content: flex-start;
   }
 
@@ -229,7 +240,11 @@
     display: none;
   }
 
-  .dock-caption {
+  .dock-lg .dock-caption {
     display: block;
+  }
+
+  .dock-lg .dock-rail {
+    grid-template-columns: repeat(var(--cols), auto);
   }
 }
