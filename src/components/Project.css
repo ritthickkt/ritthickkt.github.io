@@ -4,98 +4,46 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  border-radius: 20px;
+  border-radius: var(--radius-md);
   overflow: hidden;
-  transition: transform 2s ease;
   width: 100%;
-  border: 1px solid rgba(0, 170, 255, 1);
+  background: var(--surface);
+  border: 1px solid var(--border);
   opacity: 0;
-}
-
-.project-parent.featured .project-image {
-  height: 220px;
-  object-fit: cover;
-}
-
-.project-parent.featured .project-title {
-  font-size: 28px;
-}
-
-.project-parent.featured .project-description {
-  font-size: 14px;
+  transition: transform 0.45s var(--ease-out), border-color 0.45s var(--ease-out),
+    background-color 0.45s var(--ease-out), box-shadow 0.45s var(--ease-out);
 }
 
 .show.project-parent {
   animation-name: fadeInFromBottom;
-  animation-duration: 1s;
+  animation-duration: 0.9s;
+  animation-timing-function: var(--ease-out);
   animation-fill-mode: forwards;
-}
-
-.show.project {
-  animation-name: fadeInFromBottom;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-
-.show.title-stack {
-  animation-name: fadeInFromBottom;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-
-.show.project-title {
-  animation-name: fadeInFromBottom;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-
-.show.stack-align {
-  animation-name: fadeInFromBottom;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-
-.show.project-description {
-  animation-name: fadeInFromBottom;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-
-.project {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  border-radius: 20px;
-  overflow: hidden;
-  padding: 10px;
-  opacity: 0;
 }
 
 .project-parent:hover {
-  transform: scale(1.05);
+  transform: translateY(-6px);
+  background: var(--surface-hover);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-lg);
   cursor: pointer;
 }
 
 .project-image {
   width: 100%;
-  height: 160px;
+  height: 170px;
   object-fit: cover;
-  margin-bottom: 20px;
+  display: block;
 }
 
-.project-title {
-  font-weight: bold;
-  margin-left: 10px;
-  font-size: 25px;
-  opacity: 0;
+.project-parent.featured .project-image {
+  height: 230px;
 }
 
-.project-description {
-  line-height: 1.5;
-  margin-left: 10px;
-  font-size: 15px;
-  margin-bottom: 20px;
-  opacity: 0;
+.project {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 22px 24px;
 }
 
 .title-stack {
@@ -103,15 +51,44 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
   width: 100%;
   margin-bottom: 10px;
-  opacity: 0;
+}
+
+.project-title {
+  font-weight: 600;
+  font-size: 19px;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.project-parent.featured .project-title {
+  font-size: 23px;
+}
+
+.project-description {
+  line-height: 1.55;
+  font-size: 14px;
+  color: var(--text-dim);
 }
 
 .stack-align {
   display: flex;
   gap: 8px;
   align-items: center;
-  margin-right: 10px;
-  opacity: 0;
+  flex-shrink: 0;
+}
+
+.stack-image {
+  opacity: 0.85;
+}
+
+/* Monochrome marks that vanish against one of the canvases */
+:root[data-theme='light'] .stack-image.tone-light {
+  filter: brightness(0);
+}
+
+:root[data-theme='dark'] .stack-image.tone-dark {
+  filter: brightness(0) invert(1);
 }

@@ -1,11 +1,37 @@
 import './WorkExperience.css'
 import Experience from "./Experience"
 
+import dpn from '/src/assets/logos/dpn.png'
+import galaxy from '/src/assets/logos/galaxy.png'
+import ladder from '/src/assets/logos/ladder.png'
+import pearler from '/src/assets/logos/pearler.jpg'
+import webacy from '/src/assets/logos/webacy.jpeg'
+
+/*
+ * Company logos: drop a file into src/assets/logos/, import it here, and pass it
+ * as ExperienceLogo. Rows without one fall back to a monogram tile.
+ */
+
 function WorkExperience() {
   return (
     <div className="experience-stack">
       <Experience
+        ExperienceCompany="DPN"
+        ExperienceLogo={dpn}
+        ExperienceTitle="Digital Systems Associate"
+        ExperienceDate="May 2026 - Present"
+        ExperienceDescription={[
+          "Supporting the adoption and integration of AI and emerging technologies across DPN Group, with a focus on translating AI capabilities into practical, scalable business outcomes.",
+          "Evaluating and recommending AI tools to improve team workflows and reduce manual effort.",
+          "Building AI-assisted automations and documenting processes for scalability.",
+          "Contributing to systems projects, testing, and prompt engineering.",
+          "Supporting internal training and enablement through guides and sessions to drive team-wide adoption.",
+          "Rapidly prototyping internal tools and assessing their value and feasibility.",
+        ]}
+      />
+      <Experience
         ExperienceCompany="Ladder Inc"
+        ExperienceLogo={ladder}
         ExperienceTitle="Software Engineer"
         ExperienceDate="Jan 2026 - Present"
         ExperienceDescription={[
@@ -16,6 +42,8 @@ function WorkExperience() {
       />
       <Experience 
         ExperienceCompany="Galaxy Technology Services"
+        ExperienceLogo={galaxy}
+        ExperiencePlate
         ExperienceTitle="AI Product Developer Intern"
         ExperienceDate="August 2025 - December 2025"
         ExperienceDescription={[
@@ -28,6 +56,7 @@ function WorkExperience() {
       />
       <Experience 
         ExperienceCompany="Pearler"
+        ExperienceLogo={pearler}
         ExperienceTitle="Penetration Tester"
         ExperienceDate="September 2024 - December 2024"
         ExperienceDescription={[
@@ -37,6 +66,7 @@ function WorkExperience() {
       />
       <Experience 
         ExperienceCompany="Webacy"
+        ExperienceLogo={webacy}
         ExperienceTitle="Data Analyst Extern"
         ExperienceDate="August 2024 - September 2024"
         ExperienceDescription={[

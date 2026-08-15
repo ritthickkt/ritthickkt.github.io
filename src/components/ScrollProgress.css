@@ -3,8 +3,8 @@
   top: 0;
   left: 0;
   height: 2px;
-  background: linear-gradient(90deg, rgba(0, 170, 255, 1) 0%, rgba(130, 60, 255, 1) 100%);
-  box-shadow: 0 0 10px rgba(0, 170, 255, 0.8), 0 0 24px rgba(0, 170, 255, 0.3);
+  background: var(--text);
+  opacity: 0.85;
   z-index: 99997;
   pointer-events: none;
 }

@@ -1,0 +1,113 @@
+/*
+ * Appears once the hero has scrolled away, carrying the identity and controls
+ * that were part of the cover.
+ */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99996;
+  background: var(--glass);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.45s var(--ease-out), opacity 0.35s ease, visibility 0.45s,
+    background-color 0.5s var(--ease-out), border-color 0.5s var(--ease-out);
+}
+
+.navbar.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: min(1100px, 90vw);
+  height: 62px;
+  margin: 0 auto;
+}
+
+.navbar-identity {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 4px;
+  margin-left: -4px;
+  background: none;
+  border: none;
+  border-radius: 100px;
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+  transition: opacity 0.3s var(--ease-out);
+}
+
+.navbar-identity:hover {
+  opacity: 0.7;
+}
+
+.navbar-identity:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+.navbar-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+}
+
+.navbar-name {
+  font-size: 15px;
+  font-weight: 550;
+  letter-spacing: -0.015em;
+  white-space: nowrap;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.navbar-socials {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar-socials a {
+  display: grid;
+  place-items: center;
+}
+
+@media (max-width: 800px) {
+  .navbar-inner {
+    width: 88vw;
+    height: 56px;
+  }
+
+  .navbar-actions {
+    gap: 14px;
+  }
+
+  .navbar-socials {
+    gap: 13px;
+  }
+}
+
+@media (max-width: 420px) {
+  .navbar-name {
+    display: none;
+  }
+}

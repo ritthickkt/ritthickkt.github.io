@@ -1,0 +1,81 @@
+@import './Animations.css';
+
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(36px, 5vw, 80px);
+  width: 100%;
+}
+
+.about .reveal {
+  opacity: 0;
+}
+
+.about .reveal.show {
+  animation-name: fadeInFromBottom;
+  animation-duration: 0.9s;
+  animation-timing-function: var(--ease-out);
+  animation-fill-mode: forwards;
+}
+
+/* Meta column */
+.about-facts {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin: 6px 0 0;
+}
+
+.about-fact dt {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 6px;
+}
+
+.about-fact dd {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+/* Prose column */
+.about-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-lead {
+  margin: 0;
+  font-size: clamp(20px, 2.2vw, 27px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+  color: var(--text);
+  animation-delay: 0.05s;
+}
+
+.about-text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-dim);
+  animation-delay: 0.12s;
+}
+
+@media (max-width: 860px) {
+  .about {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .about-facts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}

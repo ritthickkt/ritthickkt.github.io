@@ -1,0 +1,235 @@
+@import './Animations.css';
+
+.dock {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  animation: fadeInFromBottom 0.9s var(--ease-out) backwards;
+}
+
+.dock-rail {
+  display: flex;
+  align-items: flex-end;
+  gap: calc(var(--tile) / 3);
+  padding: calc(var(--tile) / 3.6);
+  max-width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--glass);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  box-shadow: var(--shadow-lg);
+  transition: background-color 0.5s var(--ease-out), border-color 0.5s var(--ease-out);
+}
+
+.dock-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 auto;
+  text-decoration: none;
+  color: inherit;
+  transform-origin: bottom center;
+  transform: translateY(var(--lift, 0px)) scale(var(--scale, 1));
+  transition: transform 0.22s var(--ease-out);
+  animation: fadeIn 0.6s ease backwards;
+  will-change: transform;
+}
+
+.dock-item[href] {
+  cursor: pointer;
+}
+
+.dock-tile {
+  display: grid;
+  place-items: center;
+  width: var(--tile);
+  height: var(--tile);
+  border-radius: calc(var(--tile) * 0.26);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition: background-color 0.3s var(--ease-out), border-color 0.3s var(--ease-out);
+}
+
+.dock-item:hover .dock-tile {
+  background: var(--surface-hover);
+  border-color: var(--border-strong);
+}
+
+.dock-icon {
+  width: 62%;
+  height: 62%;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/*
+ * App-icon artwork carries its own squircle and colour, so the tile drops its
+ * glass ground and the icon fills the slot edge to edge.
+ */
+.dock-tile.app-icon {
+  background: none;
+  border: none;
+}
+
+.dock-icon.fill {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
+}
+
+.dock-item:hover .dock-tile.app-icon {
+  background: none;
+}
+
+/*
+ * Monochrome brand marks disappear against one of the two canvases, so they
+ * are flattened to a silhouette in the theme where they'd otherwise vanish.
+ * `plate` is for multi-colour marks that can't be flattened.
+ */
+:root[data-theme='dark'] .dock-icon.tone-dark {
+  filter: brightness(0) invert(1);
+}
+
+:root[data-theme='light'] .dock-icon.tone-light {
+  filter: brightness(0);
+}
+
+:root[data-theme='dark'] .dock-tile.plate {
+  background: #f5f5f7;
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+:root[data-theme='dark'] .dock-item:hover .dock-tile.plate {
+  background: #ffffff;
+}
+
+/* Magnified label, macOS style */
+.dock-label {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  white-space: nowrap;
+  padding: 5px 11px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--text);
+  background: var(--glass);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: var(--shadow-sm);
+  opacity: 0;
+  pointer-events: none;
+  /* Counter-scaled so the label keeps its size inside the magnified item. */
+  transform: translate(-50%, 6px) scale(calc(1 / var(--scale, 1)));
+  transform-origin: bottom center;
+  transition: opacity 0.18s ease, transform 0.22s var(--ease-out);
+}
+
+.dock-item.is-near .dock-label,
+.dock-item:focus-visible .dock-label {
+  opacity: 1;
+  transform: translate(-50%, 0) scale(calc(1 / var(--scale, 1)));
+}
+
+.dock-item:focus-visible {
+  outline: none;
+}
+
+.dock-item:focus-visible .dock-tile {
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
+}
+
+/* Static caption — only used where hover magnification isn't available */
+.dock-caption {
+  display: none;
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+/* Grid mode: an exact rectangle of tiles rather than a single row. */
+.dock-grid .dock-rail {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), var(--tile));
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  isolation: isolate;
+}
+
+.dock-grid {
+  justify-content: center;
+}
+
+.dock-item.is-near {
+  z-index: 2;
+}
+
+/* ---------- Sizes ---------- */
+
+/* Toolkit: 15 tiles as 5 x 3. */
+.dock-md .dock-rail {
+  --tile: clamp(42px, 6.1vw, 74px);
+}
+
+/* Products: 4 tiles as 2 x 2, larger since there are fewer of them. */
+.dock-lg .dock-rail {
+  --tile: clamp(62px, 9.2vw, 112px);
+}
+
+/* ---------- Touch / small screens ---------- */
+
+@media (hover: none) {
+  .dock-rail {
+    overflow-x: auto;
+    justify-content: flex-start;
+    scrollbar-width: none;
+  }
+
+  .dock-label {
+    display: none;
+  }
+
+  .dock-caption {
+    display: block;
+  }
+}
+
+.dock-rail::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .dock {
+    justify-content: flex-start;
+  }
+
+  /* Narrow viewports scroll the rail rather than overflowing the page, and a
+     scrolling rail clips vertical growth — so magnification gives way to
+     always-visible captions. */
+  .dock-rail {
+    overflow-x: auto;
+    justify-content: flex-start;
+    scrollbar-width: none;
+  }
+
+  .dock-item {
+    transform: none;
+  }
+
+  .dock-label {
+    display: none;
+  }
+
+  .dock-caption {
+    display: block;
+  }
+}

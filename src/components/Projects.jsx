@@ -20,10 +20,13 @@ import mailmind from "/src/assets/mailmind.png"
 import swift from "/src/assets/swift.svg"
 import claude from "/src/assets/claude.svg"
 
+// `tone` flags a monochrome mark that needs flattening in one of the themes.
+const nextjsIcon = { src: nextjs, tone: "light" }
+
 const projectList = [
   { title: "MailMind", description: "MailMind is a native macOS application that uses Claude to categorize and summarise your emails from Gmail and Outlook", link: "https://github.com/ritthickkt/mailmind", image: mailmind, stack: [swift, claude] },
   { title: "Orbit", description: "Built for VSCode, Orbit is a VSCode extension that tracks the languages you code in, the time you coded for and gives you a level in accordance with how much coding experience you have.", link: "https://github.com/ritthickkt/orbit", image: orbit, stack: [javascript] },
-  { title: "Airtable Clone", description: "Built with Supabase, Prisma, and T3 stack, made to replicate the original Airtable website application with an additional button to add 100k rows.", link: "https://github.com/ritthickkt/airtable_clone", image: airtable, stack: [react, nextjs, supabase] },
+  { title: "Airtable Clone", description: "Built with Supabase, Prisma, and T3 stack, made to replicate the original Airtable website application with an additional button to add 100k rows.", link: "https://github.com/ritthickkt/airtable_clone", image: airtable, stack: [react, nextjsIcon, supabase] },
   { title: "Code Snippet", description: "A public VS Code Extension that uses Paste Bin API to create sharable links for code snippets", link: "https://github.com/ritthickkt/codeSnippet", image: codesnippet, stack: [javascript] },
   { title: "Weather App", description: "Built with Open Meteo API and motion providing current temperature, hourly forecasts, and weekly forecasts.", link: "https://github.com/ritthickkt/weather-app", image: weatherapp, stack: [react, vite] },
   { title: "Pomodoro Timer", description: "Built with Javascript and Electron, providing a 25 and 50 minute pomodoro with 5 and 10 minute breaks respectively", link: "https://github.com/ritthickkt/pomodoro-timer", image: pomodoro, stack: [javascript, electron] },

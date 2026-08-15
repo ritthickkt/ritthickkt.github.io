@@ -1,38 +1,34 @@
 import './SectionTitle.css'
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react'
 
-
-function SectionTitle({ logo, name }) {
-  const logoRef = useRef(null);
-  const nameRef = useRef(null);
-  const lineRef = useRef(null);
+function SectionTitle({ name, kicker }) {
+  const rootRef = useRef(null)
 
   useEffect(() => {
-    const elements = [logoRef.current, nameRef.current, lineRef.current].filter(Boolean);
+    const root = rootRef.current
+    if (!root) return
 
+    const elements = Array.from(root.querySelectorAll('.reveal'))
     const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-          obs.unobserve(entry.target);
+          entry.target.classList.add('show')
+          obs.unobserve(entry.target)
         }
-      });
-    });
+      })
+    })
 
-    elements.forEach(el => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
+    elements.forEach((el) => observer.observe(el))
+    return () => observer.disconnect()
+  }, [])
 
   return (
-    <div className="title">
-      <div className='section'>
-        <img ref={logoRef} className="title-logo" src={logo} width={30} height={30}/>
-        <span ref={nameRef} className='section-name'>{name}</span>
-      </div>
-      <hr ref={lineRef} className="dotted-line" />
+    <div className="title" ref={rootRef}>
+      {kicker && <span className="section-kicker reveal">{kicker}</span>}
+      <h2 className="section-name reveal">{name}</h2>
+      <hr className="hairline reveal" />
     </div>
   )
 }
-
 
 export default SectionTitle

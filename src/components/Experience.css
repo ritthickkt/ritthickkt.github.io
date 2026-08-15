@@ -1,97 +1,104 @@
 @import './Animations.css';
 
 .experience {
+  position: relative;
   display: flex;
   flex-direction: row;
-  width: 80%;
-  border-left: 1px solid rgb(162, 162, 162);
+  width: 100%;
+  border-left: 1px solid var(--border);
 }
 
-.title-align {
-  display: flex;
-  flex-direction: row;
-}
-
-/* .vertical-line-with-dot {
-  width: 2px;
-  height: 300px;
-  background-color:rgb(162, 162, 162);
-  position: relative; 
-  margin-right: 20px;
-}
-
-.vertical-line-with-dot::before {
-  content: ""; 
-  display: block;
-  width: 10px; 
-  height: 10px;
-  background-color: rgba(0, 170, 255, 1);
-  border-radius: 50%; 
-  position: absolute; 
-  top: 8px;
-  left: 50%; 
-  transform: translateX(-50%);
-} */
-
-.circle {
-  width: 10px;
-  height: 10px;
-  background-color: rgba(0, 170, 255, 1);
-  border-radius: 50%;
-  display: block;
+/* Rides on the timeline, with an opaque ground so the rule doesn't show through. */
+.experience-logo {
   position: absolute;
-  transform: translateY(10px) translateX(-6px);
+  left: 0;
+  top: 0;
+  transform: translateX(-50%);
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--bg);
+  box-shadow: 0 0 0 1px var(--border) inset;
+}
+
+/* Artwork with a transparent ground and dark detail needs its own plate here. */
+:root[data-theme='dark'] .experience-logo.plate {
+  background: #f5f5f7;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08) inset;
+}
+
+.experience-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.experience-monogram {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-dim);
 }
 
 .experience-content {
   display: flex;
   flex-direction: column;
-  margin-bottom: 50px;
+  margin-left: 46px;
+  padding-top: 4px;
+  margin-bottom: 52px;
   opacity: 0;
 }
 
 .show.experience-content {
   animation-name: fadeInFromBottom;
-  animation-duration: 1s;
+  animation-duration: 0.9s;
+  animation-timing-function: var(--ease-out);
   animation-fill-mode: forwards;
 }
 
-.scrolling-up.experience-content {
-  opacity: 1;
-}
-
 .experience-company {
-  font-weight: bold;
-  font-size: 30px;
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  color: var(--text);
 }
 
 .experience-title {
-  font-size: 20px;
-  color: rgba(0, 170, 255, 1);;
+  font-size: 16px;
+  color: var(--text);
+  margin-top: 2px;
 }
 
 .experience-date {
-  color: rgb(162, 162, 162);
+  color: var(--text-faint);
+  font-size: 14px;
+  margin-top: 2px;
+  margin-bottom: 10px;
 }
 
 .experience-description {
-  line-height: 1.5;
+  line-height: 1.7;
+  font-size: 14px;
+  color: var(--text-dim);
+  margin: 0;
+  padding-left: 18px;
 }
 
-.experience-company,
-.experience-title,
-.experience-content,
-.experience-date,
-.experience-description {
-  margin-left: 20px;
+.experience-description li {
+  margin-bottom: 6px;
 }
 
 @media (max-width: 800px) {
-  .vertical-line-with-dot {
-    width: 2px;
-    height: 400px;
-    background-color:rgb(162, 162, 162);
-    position: relative; 
-    margin-right: 20px;
+  .experience-logo {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+  }
+
+  .experience-content {
+    margin-left: 34px;
   }
 }

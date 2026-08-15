@@ -1,71 +1,55 @@
 @import './Animations.css';
 
-.show.title-logo {
-  animation-name: spin;
-  animation-duration: 0.8s;
-  animation-fill-mode: forwards;
-}
-
-.show.section-name {
-  animation-name: fadeInFromBottom;
-  animation-duration: 0.8s;
-  animation-fill-mode: forwards;
-}
-
-.show.dotted-line {
-  animation-name: drawLine;
-  animation-duration: 1s;
-  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-  animation-fill-mode: forwards;
-}
-
 .title {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-bottom: 44px;
 }
 
-.title-logo {
-  border: 1px solid rgba(0, 170, 255, 1);
-  background-color: #09174b;
-  padding: 20px;
-  border-radius: 20px;
+.reveal {
   opacity: 0;
+}
+
+.reveal.show {
+  animation-name: fadeInFromBottom;
+  animation-duration: 0.8s;
+  animation-timing-function: var(--ease-out);
+  animation-fill-mode: forwards;
+}
+
+.section-kicker {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 10px;
 }
 
 .section-name {
-  justify-content: center;
-  font-size: 40px;
-  font-weight: 700;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(195, 200, 230, 1) 35%, rgba(59, 130, 246, 1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  opacity: 0;
+  margin: 0;
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--text);
+  animation-delay: 0.06s;
 }
 
-.dotted-line {
+.hairline {
   border: none;
   height: 1px;
-  background: linear-gradient(
-    90deg,
-    rgba(25, 19, 132, 0) 0%,
-    rgba(25, 19, 132, 0) 10%,
-    rgba(59, 130, 246, 1) 50%,
-    rgba(9, 9, 121, 0) 90%,
-    rgba(9, 9, 121, 0) 100%
-  );
-  margin: 16px 0;
   width: 100%;
-  margin-bottom: 50px;
-  opacity: 0;
+  background: var(--border);
+  margin: 22px 0 0;
   transform-origin: left center;
 }
 
-.section {
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
-  align-items: center;
+.hairline.show {
+  animation-name: drawLine;
+  animation-duration: 0.9s;
+  animation-timing-function: var(--ease-out);
+  animation-fill-mode: forwards;
+  animation-delay: 0.12s;
 }
