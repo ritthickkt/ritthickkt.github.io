@@ -1,6 +1,7 @@
 /*
  * Appears once the hero has scrolled away, carrying the identity and controls
- * that were part of the cover.
+ * that were part of the cover. The fixed shell stays transparent and full
+ * width; the glass lives on the inner pill so it floats clear of the edges.
  */
 .navbar {
   position: fixed;
@@ -8,15 +9,12 @@
   left: 0;
   right: 0;
   z-index: 99996;
-  background: var(--glass);
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(24px) saturate(180%);
-  -webkit-backdrop-filter: blur(24px) saturate(180%);
-  transform: translateY(-100%);
+  padding-top: 14px;
+  pointer-events: none;
+  transform: translateY(calc(-100% - 14px));
   opacity: 0;
   visibility: hidden;
-  transition: transform 0.45s var(--ease-out), opacity 0.35s ease, visibility 0.45s,
-    background-color 0.5s var(--ease-out), border-color 0.5s var(--ease-out);
+  transition: transform 0.45s var(--ease-out), opacity 0.35s ease, visibility 0.45s;
 }
 
 .navbar.is-visible {
@@ -31,8 +29,17 @@
   justify-content: space-between;
   gap: 20px;
   width: min(1100px, 90vw);
-  height: 62px;
+  height: 58px;
   margin: 0 auto;
+  padding: 0 20px;
+  pointer-events: auto;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  transition: background-color 0.5s var(--ease-out), border-color 0.5s var(--ease-out);
 }
 
 .navbar-identity {
@@ -92,9 +99,19 @@
 }
 
 @media (max-width: 800px) {
+  .navbar {
+    padding-top: 10px;
+    transform: translateY(calc(-100% - 10px));
+  }
+
+  .navbar.is-visible {
+    transform: translateY(0);
+  }
+
   .navbar-inner {
-    width: 88vw;
-    height: 56px;
+    width: 92vw;
+    height: 52px;
+    padding: 0 14px;
   }
 
   .navbar-actions {
