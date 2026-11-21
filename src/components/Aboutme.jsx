@@ -22,7 +22,7 @@ function Aboutme() {
   return (
     <div className="hero-grid">
       <div className="hero-copy">
-        <span className="hero-eyebrow">Digital Systems Associate &middot; Sydney, Australia</span>
+        <span className="hero-eyebrow">AI Engineer &middot; Sydney, Australia</span>
 
         <h1 className="hero-name">
           {NAME_LINES.map((line) => (
@@ -50,8 +50,9 @@ function Aboutme() {
         <span className="hero-rule" />
 
         <p className="hero-intro">
-          Computer Science at UNSW. I work closely with people to understand what
-          they actually need, then build and ship it end to end.
+          AI Engineer at DPN, Computer Science graduate from UNSW. I work closely
+          with people to understand what they actually need, then build and ship it
+          end to end.
         </p>
 
         <div className="contact-handles">

@@ -24,7 +24,18 @@ function Experience({
   ExperienceDescription,
   ExperienceLogo,
   ExperiencePlate,
+  ExperienceRoles,
 }) {
+  // A promotion lists several roles at one company, newest first; a single
+  // role can still be passed through the flat Title/Date/Description props.
+  const roles = ExperienceRoles ?? [
+    {
+      title: ExperienceTitle,
+      date: ExperienceDate,
+      description: ExperienceDescription,
+    },
+  ]
+
   const contentRef = useRef(null)
 
   useEffect(() => {
@@ -58,13 +69,21 @@ function Experience({
 
       <div className="experience-content" ref={contentRef}>
         <span className="experience-company">{ExperienceCompany}</span>
-        <span className="experience-title">{ExperienceTitle}</span>
-        <span className="experience-date">{ExperienceDate}</span>
-        <ul className="experience-description">
-          {ExperienceDescription.map((desc, idx) => (
-            <li key={idx}>{desc}</li>
+        <div className={`experience-roles${roles.length > 1 ? ' multi' : ''}`}>
+          {roles.map((role) => (
+            <div className="experience-role" key={role.title}>
+              <span className="experience-title">{role.title}</span>
+              <span className="experience-date">{role.date}</span>
+              {role.description?.length > 0 && (
+                <ul className="experience-description">
+                  {role.description.map((desc, idx) => (
+                    <li key={idx}>{desc}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </div>
   )

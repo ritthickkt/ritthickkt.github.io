@@ -91,6 +91,80 @@
   margin-bottom: 6px;
 }
 
+/* Roles within one company, newest first, joined by a short promotion track. */
+.experience-roles {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-role {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-roles.multi {
+  margin-top: 10px;
+}
+
+.experience-roles.multi .experience-role {
+  position: relative;
+  padding-left: 24px;
+}
+
+.experience-roles.multi .experience-role + .experience-role {
+  margin-top: 22px;
+}
+
+/* Node sits on the title's centre line: hollow for past roles, filled for the current one. */
+.experience-roles.multi .experience-role::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 1.5px solid var(--text-faint);
+  background: var(--bg);
+  z-index: 1;
+}
+
+.experience-roles.multi .experience-role:first-child::before {
+  border-color: var(--text);
+  background: var(--text);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--text) 14%, transparent);
+}
+
+/* Connector runs from this node down to the next one (next node: 22px gap + 7px offset). */
+.experience-roles.multi .experience-role:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 16px;
+  bottom: -29px;
+  width: 1px;
+  background: var(--border);
+}
+
+.experience-roles.multi .experience-title {
+  font-weight: 500;
+  line-height: 1.4;
+  margin-top: 0;
+}
+
+.experience-roles.multi .experience-role:not(:first-child) .experience-title {
+  color: var(--text-dim);
+}
+
+.experience-roles.multi .experience-date {
+  margin-bottom: 0;
+}
+
+.experience-roles.multi .experience-description {
+  margin-top: 10px;
+}
+
 @media (max-width: 800px) {
   .experience-logo {
     width: 38px;

@@ -18,15 +18,29 @@ function WorkExperience() {
       <Experience
         ExperienceCompany="DPN"
         ExperienceLogo={dpn}
-        ExperienceTitle="Digital Systems Associate"
-        ExperienceDate="May 2026 - Present"
-        ExperienceDescription={[
-          "Supporting the adoption and integration of AI and emerging technologies across DPN Group, with a focus on translating AI capabilities into practical, scalable business outcomes.",
-          "Evaluating and recommending AI tools to improve team workflows and reduce manual effort.",
-          "Building AI-assisted automations and documenting processes for scalability.",
-          "Contributing to systems projects, testing, and prompt engineering.",
-          "Supporting internal training and enablement through guides and sessions to drive team-wide adoption.",
-          "Rapidly prototyping internal tools and assessing their value and feasibility.",
+        ExperienceRoles={[
+          {
+            title: "AI Engineer",
+            date: "November 2026 - Present",
+            description: [
+              "Promoted to lead the design and delivery of AI solutions across DPN Group, taking prototypes through to production-ready internal tools.",
+              "Building LLM-powered workflows and automations that integrate with existing business systems and reduce manual effort.",
+              "Owning prompt design, evaluation, and testing to keep AI outputs reliable and fit for business use.",
+              "Partnering with teams across the business to identify high-impact AI use cases and scope them into deliverable projects.",
+            ],
+          },
+          {
+            title: "Digital Systems Associate",
+            date: "May 2026 - November 2026",
+            description: [
+              "Supporting the adoption and integration of AI and emerging technologies across DPN Group, with a focus on translating AI capabilities into practical, scalable business outcomes.",
+              "Evaluating and recommending AI tools to improve team workflows and reduce manual effort.",
+              "Building AI-assisted automations and documenting processes for scalability.",
+              "Contributing to systems projects, testing, and prompt engineering.",
+              "Supporting internal training and enablement through guides and sessions to drive team-wide adoption.",
+              "Rapidly prototyping internal tools and assessing their value and feasibility.",
+            ],
+          },
         ]}
       />
       <Experience

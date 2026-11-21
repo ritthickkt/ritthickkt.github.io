@@ -3,7 +3,8 @@ import { useEffect, useRef } from 'react'
 
 const FACTS = [
   { label: 'Based in', value: 'Sydney, Australia' },
-  { label: 'Studying', value: 'Computer Science, UNSW Sydney' },
+  { label: 'Role', value: 'AI Engineer, DPN' },
+  { label: 'Studied', value: 'Computer Science, UNSW Sydney' },
   { label: 'Focus', value: 'Client solutions & shipping products' },
   { label: 'Lived in', value: 'Abu Dhabi · Singapore · China · India · Australia' },
 ]
@@ -42,9 +43,9 @@ function About() {
 
       <div className="about-body">
         <p className="about-lead reveal">
-          I'm a third-year Computer Science student at UNSW Sydney, focused on turning
-          what a client is trying to do into something built, working, and in their
-          hands.
+          I'm an AI Engineer at DPN and a Computer Science graduate from UNSW Sydney,
+          focused on turning what a client is trying to do into something built,
+          working, and in their hands.
         </p>
         <p className="about-text reveal">
           Most of my work starts with a conversation — understanding the idea, pinning
@@ -56,8 +57,8 @@ function About() {
         <p className="about-text reveal">
           I work across the stack, with a background in security engineering that shapes
           how I build — experience in Python, Java, and C, alongside hands-on work in
-          penetration testing and tutoring coding to kids. Beyond academics, I enjoy
-          working on personal projects and contributing to student communities, all with
+          penetration testing and tutoring coding to kids. Outside of work, I enjoy
+          building personal projects and contributing to tech communities, all with
           the aim of continually growing and creating meaningful impact.
         </p>
       </div>
